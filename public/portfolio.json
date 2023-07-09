@@ -1,0 +1,109 @@
+[
+    {
+        "id": 1,
+        "website_name": "Fluent Minds",
+        "category":"MERN",
+        "website_link": "https://fluent-minds.web.app/",
+        "title": "Course marketplace with dashboards", 
+        "image":"/public/images/summer-camp.jpg",
+        "tech":[
+            "React", "Node", "Express", "MongoDB", "Stripe", "Tailwind"
+        ]  
+    },
+    {
+        "id": 2,
+        "website_name": "Wonder Toy",
+        "category":"MERN",
+        "website_link": "https://wonder-toy-391b8.web.app/",
+        "title": "Toy marketplace with user auth and CRUD", 
+        "image":"/public/images/toy-marketplace.jpg",
+        "tech":[
+            "React", "Node", "Express", "MongoDB", "Tailwind"
+        ] 
+       
+    },
+    {
+        "id": 3,
+        "website_name": "Spicesavvy",
+        "category":"MERN",
+        "website_link": "https://spicesavvy-fc9c9.web.app/",
+        "title": "Recipe website with user auth and routing", 
+        "image":"/public/images/Spicyssavy.jpg",
+        "tech":[
+            "React", "Node", "Express", "Vanila CSS", "Bootstrap"
+        ] 
+       
+    },
+    {
+        "id": 4,
+        "website_name": "Career Network",
+        "category":"BASIC",
+        "website_link": "https://luxury-conkies-302214.netlify.app/",
+        "title": "Using Basic React and React Router", 
+        "image":"/public/images/career-network.jpg",
+        "tech":[
+            "React", "JavaScript", "firebase", "Bootstrap"
+        ] 
+       
+    },
+    {
+        "id": 5,
+        "website_name": "brainstorme-cafe",
+        "category":"BASIC",
+        "website_link": "https://dulcet-marigold-109a2d.netlify.app/",
+        "title": "Recipe website with user auth and routing", 
+        "image":"/public/images/brainstorme-cafe.jpg",
+        "tech":[
+            "React", "JavaScript", "Bootstrap"
+        ] 
+       
+    },
+    {
+        "id": 6,
+        "website_name": "Ai Universe Hub",
+        "category":"BASIC",
+        "website_link": "https://beamish-banoffee-26f10b.netlify.app/",
+        "title": "Using JavaScript and API", 
+        "image":"/public/images/ai-universe.jpg",
+        "tech":[
+               "JavaScript", "Html", "css", "Bootstrap"
+        ] 
+       
+    },
+    {
+        "id": 7,
+        "website_name": "Geometry Genius",
+        "category":"BASIC",
+        "website_link": "https://gleeful-dango-001f99.netlify.app/",
+        "title": "Integrate Vanilla JavaScriptI", 
+        "image":"/public/images/geometry-ginius.jpg",
+        "tech":[
+            "JavaScript", "Html", "CSS", "Bootstrap"
+        ] 
+       
+    },
+    {
+        "id": 8,
+        "website_name": "Legal Solution",
+        "category":"BASIC",
+        "website_link": "https://ornate-basbousa-7acc05.netlify.app/",
+        "title": "CSS Frameworks Using Bootstrap", 
+        "image":"/public/images/justise.jpg",
+        "tech":[
+            "HTML", "Bootstrap"
+        ] 
+       
+    },
+    {
+        "id": 9,
+        "website_name": "G3-Architect",
+        "category":"BASIC",
+        "website_link": "https://bspirahim.github.io/g3-architects/",
+        "title": "Responsive Web Layout Using HTML5 and CSS3", 
+        "image":"/public/images/g3-2.jpg",
+        "tech":[
+            "HTML", "CSS"
+        ] 
+       
+    }
+  ]

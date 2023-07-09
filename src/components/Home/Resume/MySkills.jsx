@@ -1,5 +1,4 @@
 import React from 'react';
-import ProgressBar from '../../../components/ProgressBar/ProgressBar'
 
 const MySkills = () => {
     return (

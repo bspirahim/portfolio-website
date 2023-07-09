@@ -1,6 +1,9 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import './Portfolio.css'
+import All from './All';
+import Basic from './Basic';
+import Mern from './Mern';
 
 const Portfolio = () => {
     return (
@@ -18,13 +21,13 @@ const Portfolio = () => {
                         <Tab>MERN</Tab>
                     </TabList>
                     <TabPanel>
-                        <h1>All</h1>
+                        <All></All>
                     </TabPanel>
                     <TabPanel>
-                    <h1>BASIC</h1>
+                    <Basic></Basic>
                     </TabPanel>
                     <TabPanel>
-                       <h1>MERN</h1>
+                       <Mern></Mern>
                     </TabPanel>
                 </Tabs>
 
