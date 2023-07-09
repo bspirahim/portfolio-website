@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import portfolio from './../../../../public/portfolio.json'
 import { Link } from 'react-router-dom';
 
 const Basic = () => {
@@ -13,12 +12,11 @@ const Basic = () => {
         .then(data => setBasic(data.filter(pf => pf.category == "BASIC")))
     },[])
 
-    console.log(basic)
-    
+
     const loadModal = (id) => {
         console.log(id);
         window.my_modal_4.showModal(id)
-        const found = portfolio.find(element => element.id == id);
+        const found = basic.find(element => element.id == id);
         setData(found);
     }
     return (
