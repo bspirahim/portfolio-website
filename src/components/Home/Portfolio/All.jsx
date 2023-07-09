@@ -8,7 +8,7 @@ const All = () => {
 
 
     useEffect(()=>{
-        fetch('portfolio.json')
+        fetch('/portfolio.json')
         .then(res => res.json())
         .then(data => setAllData(data))
     },[])

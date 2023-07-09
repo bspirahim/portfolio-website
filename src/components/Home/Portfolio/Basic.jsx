@@ -7,7 +7,7 @@ const Basic = () => {
     const [basic, setBasic] = useState([])
 
     useEffect(()=>{
-        fetch('portfolio.json')
+        fetch('/portfolio.json')
         .then(res => res.json())
         .then(data => setBasic(data.filter(pf => pf.category == "BASIC")))
     },[])

@@ -7,7 +7,7 @@ const Mern = () => {
     const [mern, setMern] = useState([])
 
     useEffect(()=>{
-        fetch('portfolio.json')
+        fetch('/portfolio.json')
         .then(res => res.json())
         .then(data => setMern(data.filter(pf => pf.category == "MERN")))
     },[])
