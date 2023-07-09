@@ -1,0 +1,26 @@
+.react-tabs__tab {
+    width: 80%;
+    padding:  0.7rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1;
+    color: gray;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .react-tabs__tab:hover {
+    color: #20c997;
+  }
+
+  .react-tabs__tab--selected {
+    border-bottom: 3px solid #20c997;
+    color: #20c997;
+  }
+   
+
+  @media only screen and (max-width: 576px) {
+    .react-tabs__tab{
+      font-size: 13px;
+    }
+}

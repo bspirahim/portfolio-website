@@ -1,5 +1,6 @@
 import React from 'react';
 import MySkills from './MySkills';
+import { FaDownload } from 'react-icons/fa';
 
 const Resume = () => {
     return (
@@ -14,7 +15,7 @@ const Resume = () => {
                 <div class="grid grid-cols-2 gap-4">
                     <div className='bg-[#111418] rounded-xl p-7'>
 
-                    <p className='mb-3 mx-auto text-white '><span className='px-3 bg-[#DC3545] rounded-md'>2016-2020</span></p>
+                        <p className='mb-3 mx-auto text-white '><span className='px-3 bg-[#DC3545] rounded-md'>2016-2020</span></p>
 
                         <h1 className='mb-3 text-white text-2xl font-bold'>Computer Technology</h1>
                         <p className='mb-3 text-[#20c997]'>Bangladesh Sweden Polytechnic Institute</p>
@@ -23,7 +24,7 @@ const Resume = () => {
                     <div>
                         <div className='bg-[#111418] rounded-xl p-7'>
 
-                                <p className='mb-3 mx-auto text-white '><span className='px-3 bg-[#DC3545] rounded-md'>2022-Present</span></p>
+                            <p className='mb-3 mx-auto text-white '><span className='px-3 bg-[#DC3545] rounded-md'>2022-Present</span></p>
 
                             <h1 className='mb-3 text-white text-2xl font-bold'>Computer Science and Engineering</h1>
                             <p className='mb-3 text-[#20c997]'>Green University of Bangladesh</p>
@@ -34,7 +35,11 @@ const Resume = () => {
                 </div>
             </div>
             <MySkills></MySkills>
+            <div className='text-center my-7'>
+                <button className="btn btn-outline text-zinc-500 rounded-full border-2 border-zinc-500 px-7">Download CV <FaDownload></FaDownload> </button>
+            </div>
         </div>
+
     );
 };
 
