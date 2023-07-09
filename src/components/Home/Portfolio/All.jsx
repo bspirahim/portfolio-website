@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import portfolio from './../../../../public/portfolio.json'
 import { Link } from 'react-router-dom';
 
 const All = () => {
     const [data, setData] = useState({})
+    const [allData, setAllData] = useState([])
+
+
+    useEffect(()=>{
+        fetch('portfolio.json')
+        .then(res => res.json())
+        .then(data => setAllData(data))
+    },[])
+
+
     const loadModal = (id) => {
         console.log(id);
         window.my_modal_4.showModal(id)
-        const found = portfolio.find(element => element.id == id);
+        const found = allData.find(element => element.id == id);
         setData(found);
     }
     return (
         <>
-            {/*         {
-            data.map(dt => console.log(dt))
-        } */}
             <div className='my-10'>
                 <ResponsiveMasonry
                     columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
                 >
                     <Masonry gutter='20px'>
-                        {portfolio.map((pf, i) => (
+                        {allData.map((pf, i) => (
                             <img
                                 key={i}
                                 src={pf.image}
