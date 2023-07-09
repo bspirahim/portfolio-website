@@ -1,8 +1,9 @@
 import React from 'react';
+import { FaDownload } from 'react-icons/fa';
 
 const MySkills = () => {
     return (
-        <div>
+        <div data-aos="fade-up">
             <h1 className='text-white text-3xl font-bold mt-12 mb-5'>My Skills</h1>
             <div class="grid grid-cols-2 gap-4 text-white">
                 <div>
@@ -55,6 +56,9 @@ const MySkills = () => {
                     </div>
                     
                 </div>
+            </div>
+            <div className='text-center my-7'>
+                <a href='Abdur_Rahim_Resume.pdf' download className="btn btn-outline text-zinc-500 rounded-full border-2 border-zinc-500 px-7"> Download CV <FaDownload></FaDownload> </a>
             </div>
 
 

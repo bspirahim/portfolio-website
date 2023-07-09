@@ -5,12 +5,11 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 const Navber = () => {
     const navOptions = <>
 
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>What I Do</a></li>
-        <li><a>Resume</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>Contact</a></li>
+        <li><a href='#home'>Home</a></li>
+        <li><a href='#about'>About</a></li>
+        <li><a href='#resume'>Resume</a></li>
+        <li><a href='#portfolio'>Portfolio</a></li>
+        <li><a href='#contact'>Contact</a></li>
     </>
     return (
         <div className="navbar fixed z-10 text-white bg-black opacity-60">

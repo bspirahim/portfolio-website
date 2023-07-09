@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (
-        <div className='heading bg-[#343A40]'>
+        <div className='heading bg-[#343A40]' id='contact'>
             <div className='title'>
                 <h2>Contact</h2>
                 <p>Get in Touch</p>

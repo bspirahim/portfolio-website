@@ -7,7 +7,7 @@ import Mern from './Mern';
 
 const Portfolio = () => {
     return (
-        <div className='heading'>
+        <div className='heading' id='portfolio'>
             <div className='title'>
                 <h2>Portfolio</h2>
                 <p>My Work</p>

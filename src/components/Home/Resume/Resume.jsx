@@ -1,10 +1,20 @@
 import React from 'react';
 import MySkills from './MySkills';
 import { FaDownload } from 'react-icons/fa';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Resume = () => {
+
+    Aos.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+
     return (
-        <div className='heading bg-[#343A40]'>
+        <div className='heading bg-[#343A40]' id='resume'>
             <div className='title'>
                 <h2>Summary</h2>
                 <p>Resume</p>
@@ -13,7 +23,7 @@ const Resume = () => {
             <div className='mt-12'>
                 <h1 className='text-3xl font-bold text-white mb-5'>My Education</h1>
                 <div class="grid grid-cols-2 gap-4">
-                    <div className='bg-[#111418] rounded-xl p-7'>
+                    <div className='bg-[#111418] rounded-xl p-7' data-aos="fade-right">
 
                         <p className='mb-3 mx-auto text-white '><span className='px-3 bg-[#DC3545] rounded-md'>2016-2020</span></p>
 
@@ -22,7 +32,7 @@ const Resume = () => {
                         <p className='text-[#748C94]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus consequatur dicta quis, quam reprehenderit sapiente assumenda veritatis reiciendis temporibus ratione?</p>
                     </div>
                     <div>
-                        <div className='bg-[#111418] rounded-xl p-7'>
+                        <div className='bg-[#111418] rounded-xl p-7' data-aos="fade-left">
 
                             <p className='mb-3 mx-auto text-white '><span className='px-3 bg-[#DC3545] rounded-md'>2022-Present</span></p>
 
@@ -35,9 +45,7 @@ const Resume = () => {
                 </div>
             </div>
             <MySkills></MySkills>
-            <div className='text-center my-7'>
-                <button className="btn btn-outline text-zinc-500 rounded-full border-2 border-zinc-500 px-7">Download CV <FaDownload></FaDownload> </button>
-            </div>
+            
         </div>
 
     );
