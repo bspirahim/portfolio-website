@@ -50,7 +50,7 @@ const Contact = () => {
                     </div>
 
                     <div className='w-100 '>
-                        <textarea name="" id="" placeholder='Tell us more about your needs.....' className='w-full bg-[#212529] text-white p-3' rows="5"></textarea>
+                        <textarea name="" id="" placeholder='Tell us more about your needs.....' className='w-full bg-[#212529] rounded-lg text-white p-3' rows="5"></textarea>
                     </div>
                     <div className='text-center  mt-3'>
                         <button className="btn btn-primary rounded-full text-white px-10">Send Message</button>
