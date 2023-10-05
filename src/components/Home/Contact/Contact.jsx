@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaEnvelope, FaFacebook, FaFax, FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_isc713q', 
+        'template_g884uiu',
+         form.current,
+          'MdkweZg1yI3EQPB1n')
+          .then((result) => {
+              console.log(result.text);
+              toast.success('message send');
+          }, (error) => {
+              console.log(error.text);
+              toast.error(error.message);
+          });
+      };
+    
+
     return (
         <div className='heading bg-[#343A40]' id='contact'>
             <div className='title'>
@@ -39,22 +61,24 @@ const Contact = () => {
                 <div className="col-span-2 ...">
                     <h1 className=' text-white mb-5 text-xl font-bold uppercase'>Send Us a Note</h1>
 
-                    <div class="grid grid-cols-2 gap-4 mb-3">
-                        <div>
-                            <input type="text" placeholder="Name" className="w-full input input-bordered border-0 bg-[#212529] text-white" />
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div class="grid grid-cols-2 gap-4 mb-3">
+                            <div>
+                                <input type="text" name='from_name' placeholder="Name" className="w-full input input-bordered border-0 bg-[#212529] text-white" required />
+                            </div>
+
+                            <div>
+                                <input type="text" name='from_email' placeholder="email" className="w-full input input-bordered border-0 bg-[#212529] text-white" required />
+                            </div>
                         </div>
 
-                        <div>
-                            <input type="text" placeholder="email" className="w-full input input-bordered border-0 bg-[#212529] text-white" />
+                        <div className='w-100 '>
+                            <textarea name="message" id="" placeholder='Tell us more about your needs.....' className='w-full bg-[#212529] rounded-lg text-white p-3' rows="5"></textarea>
                         </div>
-                    </div>
-
-                    <div className='w-100 '>
-                        <textarea name="" id="" placeholder='Tell us more about your needs.....' className='w-full bg-[#212529] rounded-lg text-white p-3' rows="5"></textarea>
-                    </div>
-                    <div className='text-center  mt-3'>
-                        <button className="btn btn-primary rounded-full text-white px-10">Send Message</button>
-                    </div>
+                        <div className='text-center  mt-3'>
+                            <button className="btn btn-primary rounded-full text-white px-10">Send Message</button>
+                        </div>
+                    </form>
                 </div>
 
             </div>
