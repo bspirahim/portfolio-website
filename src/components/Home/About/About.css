@@ -2,10 +2,7 @@
     text-align:unset;
 }
 
-.heading{
-    background-color: #212529;
-    padding: 5rem;
- }
+    
  .title{
     text-align: center;
     position: relative;
@@ -40,6 +37,48 @@
     border: 0;
     border-bottom: 5px solid #20c997;
  }
+
+ @media only screen and (max-width: 600px) {
+    #root{
+        text-align:unset;
+    }
+    
+        
+     .title{
+        text-align: center;
+        position: relative;
+     }
+    
+    .title>h2{
+        font-size: 3.5rem;
+        line-height:1;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        color: #292D32;
+        font-weight: bold;
+    }
+    
+    .title>p{
+        transform: translate(0, -50%);
+        position: absolute;
+        top: 50%;
+        line-height:1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    
+     }
+    
+     .line{
+        width: 80px;
+        border: 0;
+        border-bottom: 2px solid #20c997;
+     }
+  }
 
 
 

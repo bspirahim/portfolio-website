@@ -5,7 +5,7 @@
         "category":"MERN",
         "website_link": "https://fluent-minds.web.app/",
         "title": "Course marketplace with dashboards", 
-        "image":"/images/summer-camp.jpg",
+        "image":"/images/course.jpg",
         "tech":[
             "React", "Node", "Express", "MongoDB", "Stripe", "Tailwind"
         ]  
@@ -16,7 +16,7 @@
         "category":"MERN",
         "website_link": "https://wonder-toy-391b8.web.app/",
         "title": "Toy marketplace with user auth and CRUD", 
-        "image":"/images/toy-marketplace.jpg",
+        "image":"/images/toy.jpg",
         "tech":[
             "React", "Node", "Express", "MongoDB", "Tailwind"
         ] 
@@ -28,7 +28,7 @@
         "category":"MERN",
         "website_link": "https://spicesavvy-fc9c9.web.app/",
         "title": "Recipe website with user auth and routing", 
-        "image":"/images/Spicyssavy.jpg",
+        "image":"/images/food.jpg",
         "tech":[
             "React", "Node", "Express", "Vanila CSS", "Bootstrap"
         ] 

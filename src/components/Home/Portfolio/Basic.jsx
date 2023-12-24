@@ -1,3 +1,4 @@
+import Aos from 'aos';
 import React, { useEffect, useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import { Link } from 'react-router-dom';
@@ -12,6 +13,7 @@ const Basic = () => {
         .then(data => setBasic(data.filter(pf => pf.category == "BASIC")))
     },[])
 
+  
 
     const loadModal = (id) => {
         console.log(id);
@@ -19,28 +21,41 @@ const Basic = () => {
         const found = basic.find(element => element.id == id);
         setData(found);
     }
+
+
+    Aos.init({
+        offset: 100,
+        duration: 300,
+        easing: 'ease-in-sine',
+        delay: 100,
+      });
     return (
         <div>
              <>
             {/*         {
             data.map(dt => console.log(dt))
         } */}
-            <div className='my-10'>
-                <ResponsiveMasonry
-                    columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                >
-                    <Masonry gutter='20px'>
+            <div data-aos="fade-up" className='my-10 '>
+                <div className='grid md:grid-cols-3 gap-10'   >
+                   
                         {basic.map((pf, i) => (
-                            <img
+                            <div className='w-full h-fit group border-2 hover:border-[#20C997]'>
+                            <div className='relative overflow-hidden'>
+                            <img className=''
                                 key={i}
                                 src={pf.image}
                                 style={{ width: "100%", display: "block", cursor: 'pointer' }}
                                 alt=""
                                 onClick={() => loadModal(pf.id)}
                             />
+                                <div className='absolute h-full w-full bg-black/30 flex items-center justify-center -bottom-10 group-hover:bottom-0  opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                                    <button    onClick={() => loadModal(pf.id)} className='bg-[#20C997]/60  text-white py-2 px-5'>Open</button>
+                                </div>
+                            </div>
+                        </div>
                         ))}
-                    </Masonry>
-                </ResponsiveMasonry>
+                   
+                </div>
 
 
             </div>

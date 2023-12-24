@@ -3,9 +3,9 @@ import { FaDownload } from 'react-icons/fa';
 
 const MySkills = () => {
     return (
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" className='max-w-screen-lg mx-auto'>
             <h1 className='text-white text-3xl font-bold mt-12 mb-5'>My Skills</h1>
-            <div class="grid grid-cols-2 gap-4 text-white">
+            <div class="grid md:grid-cols-2 gap-4 text-white">
                 <div>
                     <div className="form-control mb-4">
                         <label className="label">
@@ -58,7 +58,7 @@ const MySkills = () => {
                 </div>
             </div>
             <div className='text-center my-7'>
-                <a href='Abdur_Rahim_Resume.pdf' download className="btn btn-outline text-zinc-500 rounded-full border-2 border-zinc-500 px-7"> Download CV <FaDownload></FaDownload> </a>
+                <a href='Resume_of_Abdur_Rahim.pdf' download className="btn btn-outline text-zinc-500 rounded-full border-2 border-zinc-500 px-7"> Download CV <FaDownload></FaDownload> </a>
             </div>
 
 

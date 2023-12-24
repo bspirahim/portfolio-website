@@ -22,22 +22,27 @@ const All = () => {
     }
     return (
         <>
-            <div className='my-10'>
-                <ResponsiveMasonry
-                    columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-                >
-                    <Masonry gutter='20px'>
+            <div data-aos="fade-up" className='my-10 '>
+                <div className='grid md:grid-cols-3 gap-10'   >
+                   
                         {allData.map((pf, i) => (
-                            <img
+                            <div className='w-full h-fit group border-2 hover:border-[#20C997]'>
+                            <div className='relative overflow-hidden'>
+                            <img className=''
                                 key={i}
                                 src={pf.image}
                                 style={{ width: "100%", display: "block", cursor: 'pointer' }}
                                 alt=""
                                 onClick={() => loadModal(pf.id)}
                             />
+                                <div className='absolute h-full w-full bg-black/30 flex items-center justify-center -bottom-10 group-hover:bottom-0  opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                                    <button    onClick={() => loadModal(pf.id)} className='bg-[#20C997]/60  text-white py-2 px-5'>Open</button>
+                                </div>
+                            </div>
+                        </div>
                         ))}
-                    </Masonry>
-                </ResponsiveMasonry>
+                   
+                </div>
 
 
             </div>
@@ -45,9 +50,9 @@ const All = () => {
             <dialog id="my_modal_4" className="modal">
                 <form method="dialog" className="modal-box w-11/12 max-w-5xl  bg-[#212529]">
 
-                    <div class="grid grid-cols-2  gap-4">
-                        <div>
-                            <img src={data.image} alt="" />
+                    <div class="grid md:grid-cols-2 p-2 gap-4">
+                        <div className=''>
+                            <img className='max-w-full h-auto' src={data.image} alt="" />
                         </div>
                         <div>
                             <h3 className='text-white text-2xl font-bold mb-2'>{data.website_name}</h3>
